@@ -5,83 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sostenibilità | IL TORRIONE</title>
     <style>
-        :root { --main-color: #1a1a1a; --text-light: #666; --bg: #ffffff; --line: #eeeeee; --accent: #8c764b; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: var(--bg); color: var(--main-color); -webkit-font-smoothing: antialiased; }
-        
-        .header { padding: 40px 20px; text-align: center; border-bottom: 1px solid var(--line); }
-        .logo-img { max-width: 200px; height: auto; }
+        /* Stile pulito ed elegante */
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background-color: #ffffff; 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            color: #1a1a1a; 
+            text-align: center; 
+            -webkit-font-smoothing: antialiased;
+        }
 
-        .hero { padding: 60px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: 1.8rem; font-weight: 300; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 15px; }
-        .hero p { color: var(--text-light); font-size: 0.9rem; line-height: 1.6; }
-        .slash { color: var(--accent); margin: 0 4px; font-weight: 300; }
+        header { 
+            padding: 40px 20px; 
+            border-bottom: 1px solid #f2f2f2; 
+        }
 
-        .product-img { width: 100%; max-width: 1100px; display: block; margin: 0 auto 40px; }
+        .logo { 
+            max-width: 160px; 
+            height: auto; 
+        }
 
-        .info-container { max-width: 900px; margin: 0 auto; padding: 0 20px 80px; }
-        .item-row { display: flex; padding: 30px 0; border-bottom: 1px solid var(--line); align-items: center; }
-        @media (max-width: 768px) { .item-row { flex-direction: column; text-align: center; } }
+        .container { 
+            padding: 20px; 
+            max-width: 900px; 
+            margin: 0 auto; 
+        }
 
-        .item-label { width: 30%; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #999; }
-        .item-content { width: 50%; font-size: 1.1rem; }
-        .item-icons { width: 20%; text-align: right; }
-        @media (max-width: 768px) { .item-label, .item-content, .item-icons { width: 100%; margin-bottom: 15px; text-align: center; } }
+        h1 { 
+            font-size: 1.1rem; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            margin: 40px 0; 
+            font-weight: 300; 
+            color: #666;
+        }
 
-        .material-code { display: block; margin-top: 8px; font-size: 0.85rem; font-weight: bold; color: var(--accent); }
+        /* Gestione dell'immagine del tuo PDF */
+        .info-img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0 auto; 
+            /* Rimuovi il bordo sotto se vuoi l'immagine "libera" */
+            border: 1px solid #f0f0f0; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
 
-        .icon-box { display: flex; gap: 10px; justify-content: flex-end; }
-        @media (max-width: 768px) { .icon-box { justify-content: center; } }
-        .icon-sm { height: 40px; width: auto; }
+        .slash { 
+            color: #8c764b; 
+            margin: 0 5px; 
+        }
 
-        .france-section { background: #fdfdfd; padding: 40px 20px; text-align: center; border: 1px solid #f0f0f0; border-radius: 4px; margin-top: 40px; }
-        .triman-logo { height: 50px; margin-bottom: 15px; }
-        .france-text { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 1px; line-height: 1.8; }
-
-        .footer { padding: 60px 20px; text-align: center; font-size: 0.75rem; color: #ccc; letter-spacing: 2px; text-transform: uppercase; border-top: 1px solid var(--line); }
+        footer { 
+            margin-top: 60px; 
+            padding: 40px; 
+            font-size: 0.7rem; 
+            color: #bbbbbb; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            border-top: 1px solid #f2f2f2;
+        }
     </style>
 </head>
 <body>
 
-    <header class="header">
-        <img src="logo.png" alt="IL TORRIONE" class="logo-img">
+    <header>
+        <img src="logo.png" alt="IL TORRIONE" class="logo">
     </header>
 
-    <section class="hero">
-        <h1>Sostenibilità <span class="slash">/</span> Sustainability <span class="slash">/</span> Durabilité <span class="slash">/</span> Sostenibilidad</h1>
-        <p>
-            Istruzioni per lo smaltimento <span class="slash">/</span> Disposal instructions <span class="slash">/</span> Consignes de tri <span class="slash">/</span> Instrucciones de reciclaje
-        </p>
-    </section>
-
-    <img src="pack.jpg" alt="Product" class="product-img" onerror="this.style.display='none'">
-
-    <div class="info-container">
+    <div class="container">
+        <h1>
+            Sostenibilità <span class="slash">/</span> 
+            Sustainability <span class="slash">/</span> 
+            Durabilité
+        </h1>
         
-        <div class="item-row">
-            <div class="item-label">Bottiglia <span class="slash">/</span> Bottle <span class="slash">/</span> Bouteille <span class="slash">/</span> Botella</div>
-            <div class="item-content">
-                Vetro <span class="slash">/</span> Glass <span class="slash">/</span> Verre <span class="slash">/</span> Vidrio
-                <span class="material-code">GL 70 <span class="slash">|</span> RACCOLTA VETRO</span>
-            </div>
-            <div class="item-icons">
-                <div class="icon-box">
-                    <img src="vetro-icon.png" alt="Spain Glass" class="icon-sm">
-                </div>
-            </div>
-        </div>
-
-        <div class="france-section">
-            <img src="triman.png" alt="Triman France" class="triman-logo">
-            <div class="france-text">
-                FR: Bouteille et bouchon à trier. <br>
-                Pensez au tri! <span class="slash">/</span> Check local guidelines.
-            </div>
-        </div>
-
+        <img src="info-packaging.png" alt="Smaltimento Packaging IL TORRIONE" class="info-img">
     </div>
 
-    <footer class="footer">
-        © 2026 IL TORRIONE
+    <footer>
+        © 2026 IL TORRIONE <span class="slash">|</span> Excellence in Packaging
     </footer>
 
 </body>
